@@ -16,7 +16,7 @@ export function OrderDetails() {
 
     ]
     return (
-        <div>
+        <div className="w-full">
             <div className="flex justify-between items-center p-6">
                 <div className='flex items-center bg-white border-2 text-gray-500  rounded-md p-2 max-w-[300px]'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" className='w-4 h-4 rounded-full ' stroke="currentColor" class="w-6 h-6">
@@ -44,7 +44,7 @@ export function OrderDetails() {
             </div>
 
             <div>
-                <table className="w-full">
+                <table className="w-full ">
                     <colgroup>
                         <col className="w-1/5" />
                         <col className="w-1/5" />
@@ -58,7 +58,7 @@ export function OrderDetails() {
                             <th className="px-3 py-[10px] whitespace-nowrap text-left text-sm font-medium" colSpan="1">Status</th>
                             <th className="px-3 py-[10px] whitespace-nowrap text-left text-sm font-medium" colSpan="1">Transaction ID</th>
                             <th className="px-3 py-[10px] whitespace-nowrap text-left text-sm font-medium" colSpan="1">Refund Date</th>
-                            <th className="px-3 py-[10px] whitespace-nowrap text-right text-sm font-medium rounded-r" colSpan="1">Order Amount</th>
+                            <th className="px-8 py-[10px] whitespace-nowrap text-right text-sm font-medium rounded-r" colSpan="1">Order Amount</th>
                         </tr>
                     </thead>
 
@@ -67,13 +67,16 @@ export function OrderDetails() {
                             <tr key={order.id} className="text-sm relative border-b-2 border-gray-200">
                                 <td className="px-3 py-[10px] whitespace-nowrap text-[#146EB4] font-medium">{order.id}</td>
                                 <td className=" py-[10px] whitespace-nowrap flex  items-center text-[#1A181E]">
-                                    <span className={`bg-${order.status === 'Successful' ? 'green-500' : 'gray-400'} w-[10px] h-[10px] rounded-full mx-2`}></span>
-
+                                    {order.status === 'Successful' ? (
+                                        <span className="bg-green-500 w-[10px] h-[10px] rounded-full mx-2"></span>
+                                    ) : (
+                                        <span className="bg-gray-400 w-[10px] h-[10px] rounded-full mx-2"></span>
+                                    )}
                                     {order.status}
                                 </td>
                                 <td className="px-3 py-[10px] whitespace-nowrap text-[#4D4D4D]">{order.transactionId}</td>
                                 <td className="px-3 py-[10px] whitespace-nowrap text-[#4D4D4D]">{order.refundDate}</td>
-                                <td className="px-3 py-[10px] whitespace-nowrap text-[#1A181E] text-right ">{order.amount}</td>
+                                <td className="px-8 py-[10px] whitespace-nowrap text-[#1A181E] text-right ">{order.amount}</td>
                                 <span className=" border-b-2 border-gray-700"></span>
                             </tr>
                         ))}

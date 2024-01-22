@@ -6,7 +6,7 @@ import { RevenueCard } from "./RevenueCard";
 
 export function HeroSection() {
     return (
-        <div className="m-8">
+        <div className="mx-4 w-full pl-48">
             <div className="flex justify-between p-6 ">
                 <p className="text-black font-semibold text-xl">Overview</p>
                 <button className="flex justify-between border-2 p-1 rounded-md">

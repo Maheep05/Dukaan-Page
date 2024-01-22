@@ -5,7 +5,7 @@ export function AmountProcessed({
 }) {
     return (
         <div className="">
-            <div className=" flex flex-grow flex-col justify-center min-w-[400px] shadow-sm border-2 border-gray-100 rounded-lg  p-4">
+            <div className=" flex flex-grow flex-col justify-center min-w-[350px] shadow-sm border-2 border-gray-100 rounded-lg  p-4">
                 <div className="flex flex-row justify-start items-center text-gray-500">
                     <p className="text-lg font-normal">{title}</p>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 mx-2 ">
